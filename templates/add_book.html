@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<div class="form-card">
+    <p class="small-title">LIBRARY</p>
+    <h1>Add New Book</h1>
+
+    {% if message %}
+    <div class="message {{ message_type }}">{{ message }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <label>Book ID</label>
+        <input type="text" name="book_id" placeholder="Example: B006" required>
+
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Enter book title" required>
+
+        <label>Author</label>
+        <input type="text" name="author" placeholder="Enter author name" required>
+
+        <button type="submit" class="button">Add Book</button>
+    </form>
+</div>
+{% endblock %}

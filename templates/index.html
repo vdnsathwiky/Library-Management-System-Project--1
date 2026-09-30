@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <p class="small-title">WELCOME TO</p>
+    <h1>Library Management System</h1>
+    <p>A simple application to manage books, availability, issuing and returns.</p>
+
+    <div>
+        <a class="button view-button" href="{{ url_for('view_books') }}">View Books</a>
+        <a class="button add-button" href="{{ url_for('add_book') }}">Add Book</a>
+        <a class="button search-button" href="{{ url_for('search_books') }}">Search Books</a>
+    </div>
+</div>
+
+<div class="info-grid">
+    <div class="info-card"><h3> Manage Books</h3><p>Add, view and delete books.</p></div>
+    <div class="info-card"><h3> Search</h3><p>Search by title or author.</p></div>
+    <div class="info-card"><h3> Issue & Return</h3><p>Track availability and borrowers.</p></div>
+    <div class="info-card"><h3> Save Data</h3><p>Data is saved in a JSON file.</p></div>
+</div>
+{% endblock %}

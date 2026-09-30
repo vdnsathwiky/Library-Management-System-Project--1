@@ -1,0 +1,58 @@
+[
+    {
+        "book_id": "B001",
+        "title": "Python Crash Course",
+        "author": "Eric Matthes",
+        "available": true,
+        "borrower": ""
+    },
+    {
+        "book_id": "B002",
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "available": true,
+        "borrower": ""
+    },
+    {
+        "book_id": "B003",
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt",
+        "available": true,
+        "borrower": ""
+    },
+    {
+        "book_id": "B004",
+        "title": "Fluent Python",
+        "author": "Luciano Ramalho",
+        "available": false,
+        "borrower": "Kishan"
+    },
+    {
+        "book_id": "B005",
+        "title": "Automate the Boring Stuff with Python",
+        "author": "Al Sweigart",
+        "available": true,
+        "borrower": ""
+    },
+    {
+        "book_id": "B006",
+        "title": "Python Basics",
+        "author": "Bharadwaj",
+        "available": true,
+        "borrower": ""
+    },
+    {
+        "book_id": "001",
+        "title": "Advanced Python",
+        "author": "Himanshu",
+        "available": false,
+        "borrower": "Sathwik"
+    },
+    {
+        "book_id": "B009",
+        "title": "Python main",
+        "author": "Sahaja",
+        "available": false,
+        "borrower": "Chanu"
+    }
+]

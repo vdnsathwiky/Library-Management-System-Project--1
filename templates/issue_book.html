@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Issue Book{% endblock %}
+
+{% block content %}
+<div class="form-card">
+    <p class="small-title">ISSUE BOOK</p>
+    <h1>{{ book.title }}</h1>
+    <p>Enter the name of the person borrowing this book.</p>
+
+    {% if message %}
+    <div class="message {{ message_type }}">{{ message }}</div>
+    {% endif %}
+
+    <div class="book-summary">
+        <p><strong>Book ID:</strong> {{ book.book_id }}</p>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+    </div>
+
+    <form method="POST">
+        <label>Borrower Name</label>
+        <input type="text" name="borrower" placeholder="Enter borrower name" required>
+
+        <button type="submit" class="button">Issue Book</button>
+        <a class="button secondary" href="{{ url_for('view_books') }}">Cancel</a>
+    </form>
+</div>
+{% endblock %}

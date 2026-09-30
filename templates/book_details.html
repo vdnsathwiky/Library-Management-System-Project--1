@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Book Details{% endblock %}
+
+{% block content %}
+<div class="details-card">
+    <p class="small-title">BOOK DETAILS</p>
+    <h1>{{ book.title }}</h1>
+
+    <div class="details-list">
+        <div><span>Book ID</span><strong>{{ book.book_id }}</strong></div>
+        <div><span>Title</span><strong>{{ book.title }}</strong></div>
+        <div><span>Author</span><strong>{{ book.author }}</strong></div>
+        <div>
+            <span>Availability</span>
+            {% if book.available %}
+                <strong class="available">Available</strong>
+            {% else %}
+                <strong class="issued">Issued</strong>
+            {% endif %}
+        </div>
+        <div>
+            <span>Borrower</span>
+            {% if book.available %}-{% else %}<strong>{{ book.borrower }}</strong>{% endif %}
+        </div>
+    </div>
+
+    {% if book.available %}
+        <a class="button" href="{{ url_for('issue_book', book_id=book.book_id) }}">Issue Book</a>
+    {% else %}
+        <a class="button" href="{{ url_for('return_book', book_id=book.book_id) }}">Return Book</a>
+    {% endif %}
+
+    <a class="button secondary" href="{{ url_for('view_books') }}">Back to Books</a>
+</div>
+{% endblock %}
